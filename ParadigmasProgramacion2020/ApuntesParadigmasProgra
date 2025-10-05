@@ -1,0 +1,135 @@
+Los lenguajes de programación deben atender las necesidades de los programas: el cambio de estado, la secuencia de instrucciones, el control.
+
+El control se hace para manejar: el hardware, la memoria, el flujo de la ejecución o modelos de ejecución, el flujo de control, y el desempeño requerido.
+
+Como los lenguajes de programación deben ser breves, concisos, y claros. Para esto la sintaxis debe acoplarse a estas características.
+
+En la definición de lenguaje de Edwaerd Sapir este sirve para expresar ideas, emociones, y deseos.
+
+Para programar una lista en Java:
+
+List<Integer> numeros = arreglo.comoLista(1,2,3,4,5);
+
+Se usa la función Stream:
+
+Stream<Integer> streamNumeros = numeros.stream();
+
+Stream<Integer> numeros = arreglo.comoLista(1,2,3,4,5)
+                .stream()
+                .filter(n -> n % 2 == 0)
+                .map(n -> n * 2)
+                .sorted();
+
+Ejemplo de una lambda simple en Java:
+
+() -> System.out.println("Imprime en consola");
+
+public class TamanioO implements Funcion<String,Integer> {
+    public Integer apply(String s) {
+        return s.length();
+    }
+}
+
+En forma de lambda:
+
+Funcion<String,Integer> TamanioO = (String s) -> {
+    return s.length();
+}
+
+Funcion<String,Integer> TamanioO = s -> s.length();
+
+
+
+class Persona {
+    String nombre;
+    
+    Persona (String nombre) {
+        this.nombre = nombre;
+    }
+}
+ 
+
+List<Persona> personas = new ArrayList<> ();
+personas.add(new Persona("Pepe"));
+personas.add(new Persona("Julio"));
+
+personas.sort((l,r) -> l.nombre.compareA(r,nombre));
+
+java.util.comparator<T>
+
+
+Hacer una lista de nombres con una clase y con un arreglo usando la programación funcional.
+
+
+ArrayList<String> nombres = Lists.newArrayList(
+"Juan", "Jesus", "Jose", "Miriam", "Alejandro", );
+
+
+for(String name:names) {
+    System.out.println(name);
+}
+
+names.forEach(name -> System.out.println(name));
+
+names.forEach(System.out::println);
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class CrearArregloLista {
+    public static void main(String[] args) {
+        ArrayList<Integer> list0 = new ArrayList<>();
+
+        // hace uso del polimorfismo
+        List lista1 = new ArrayList<Integer>();
+
+        // variable local con palabra clave "var", Java 10
+        var lista2 = new ArrayList<Integer>();
+    }
+}
+
+Para actualizar un elemento de la lista:
+
+nombreLista.set(pos,dato a cambiar);
+
+Para quitar un elemento de la lista:
+
+nombreLista.remove(pos);
+
+Para agregar un elemento a la lista:
+
+nombreLista.add(valor elemento);
+
+Para crear una lista bidimensional:
+
+ArrayList<ArrayList<Integer>> nombreLista = new ArrayList<> ();
+
+int numberOfLists = 3;
+for (int i = 0; i < numberOfLists; i++) {
+    listOfLists.add(new ArrayList<>());
+}
+
+listOfLists.get(0).add(1);
+
+public static void main(String[] args) {
+        ArrayList<ArrayList<Integer>> listOfLists = new ArrayList<>();
+        System.out.println(listOfLists);
+        int numberOfLists = 3;
+        for (int i = 0; i < numberOfLists; i++) {
+            listOfLists.add(new ArrayList<>());
+        }
+
+        System.out.println(listOfLists);
+
+        listOfLists.get(0).add(1);
+        listOfLists.get(1).add(2);
+        listOfLists.get(2).add(0,3);
+
+        System.out.println(listOfLists);
+}
+
+
+FUNCIÓN PURA: es una función que no tiene efectos secundarios o que depende u opera sobre lo que se le da. La función toma el argumento y hace el cálculo y devuelve el valor del cálculo.
+
+FUNCIÓN DE ORDEN SUPERIOR: es la que acepta una o más funciones como argumentos o devuelve una función. 
+
